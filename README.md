@@ -11,7 +11,7 @@ A Python-based network diagnostic gateway that runs as a packaged service inside
 
 ```bash
 # 1. Clone the repository
-git clone <repo-url>
+git clone https://github.com/ronnitburman/sonic-openconfig-diagnostic-gateway.git
 cd sonic-openconfig-diagnostic-gateway
 
 # 2. Create and activate virtual environment
