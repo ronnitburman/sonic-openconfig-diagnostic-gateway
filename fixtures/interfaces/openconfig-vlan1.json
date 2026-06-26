@@ -1,0 +1,91 @@
+[
+  {
+    "source": "devnetsandboxiosxec9k.cisco.com:9339",
+    "timestamp": 1782449562896554644,
+    "time": "2026-06-26T00:52:42.896554644-04:00",
+    "updates": [
+      {
+        "Path": "interfaces/interface[name=Vlan1]",
+        "values": {
+          "interfaces/interface": {
+            "config": {
+              "enabled": true,
+              "name": "Vlan1",
+              "type": "iana-if-type:l3ipvlan"
+            },
+            "name": "Vlan1",
+            "openconfig-vlan:routed-vlan": {
+              "openconfig-if-ip:ipv4": {
+                "state": {
+                  "counters": {
+                    "in-discarded-pkts": "0",
+                    "in-error-pkts": "0",
+                    "in-forwarded-octets": "0",
+                    "in-forwarded-pkts": "0",
+                    "in-octets": "0",
+                    "in-pkts": "0",
+                    "out-discarded-pkts": "0",
+                    "out-error-pkts": "0",
+                    "out-forwarded-octets": "0",
+                    "out-forwarded-pkts": "0",
+                    "out-octets": "0",
+                    "out-pkts": "0"
+                  }
+                }
+              },
+              "openconfig-if-ip:ipv6": {
+                "config": {
+                  "enabled": false
+                },
+                "state": {
+                  "counters": {
+                    "in-discarded-pkts": "0",
+                    "in-error-pkts": "0",
+                    "in-forwarded-octets": "0",
+                    "in-forwarded-pkts": "0",
+                    "in-octets": "0",
+                    "in-pkts": "0",
+                    "out-discarded-pkts": "0",
+                    "out-error-pkts": "0",
+                    "out-forwarded-octets": "0",
+                    "out-forwarded-pkts": "0",
+                    "out-octets": "0",
+                    "out-pkts": "0"
+                  },
+                  "enabled": false
+                }
+              }
+            },
+            "state": {
+              "admin-status": "UP",
+              "counters": {
+                "in-broadcast-pkts": "0",
+                "in-discards": "0",
+                "in-errors": "0",
+                "in-fcs-errors": "0",
+                "in-multicast-pkts": "0",
+                "in-octets": "0",
+                "in-unicast-pkts": "0",
+                "in-unknown-protos": "0",
+                "last-clear": "1782448093092000000",
+                "out-broadcast-pkts": "0",
+                "out-discards": "0",
+                "out-errors": "0",
+                "out-multicast-pkts": "0",
+                "out-octets": "0",
+                "out-unicast-pkts": "0"
+              },
+              "enabled": true,
+              "ifindex": 19,
+              "last-change": "1782448396277000000",
+              "name": "Vlan1",
+              "openconfig-platform-port:hardware-port": "Vlan1",
+              "oper-status": "LOWER_LAYER_DOWN",
+              "type": "iana-if-type:l3ipvlan"
+            }
+          }
+        }
+      }
+    ]
+  }
+]

@@ -1,0 +1,1529 @@
+{
+  "version": "0.7.0",
+  "supported-models": [
+    {
+      "name": "Cisco-IOS-XE-aaa-actions-rpc",
+      "organization": "Cisco Systems, Inc.",
+      "version": "2022-11-01"
+    },
+    {
+      "name": "Cisco-IOS-XE-aaa-events",
+      "organization": "Cisco Systems, Inc.",
+      "version": "2022-11-01"
+    },
+    {
+      "name": "Cisco-IOS-XE-aaa-oper",
+      "organization": "Cisco Systems, Inc.",
+      "version": "2024-07-01"
+    },
+    {
+      "name": "Cisco-IOS-XE-aaa-types",
+      "organization": "Cisco Systems, Inc.",
+      "version": "2023-03-01"
+    },
+    {
+      "name": "Cisco-IOS-XE-acl-oper",
+      "organization": "Cisco Systems, Inc.",
+      "version": "2022-11-01"
+    },
+    {
+      "name": "Cisco-IOS-XE-app-hosting-cfg",
+      "organization": "Cisco Systems, Inc.",
+      "version": "2022-11-01"
+    },
+    {
+      "name": "Cisco-IOS-XE-app-hosting-oper",
+      "organization": "Cisco Systems, Inc.",
+      "version": "2023-03-01"
+    },
+    {
+      "name": "Cisco-IOS-XE-arp-oper",
+      "organization": "Cisco Systems, Inc.",
+      "version": "2022-11-01"
+    },
+    {
+      "name": "Cisco-IOS-XE-ios-common-oper",
+      "organization": "Cisco Systems, Inc.",
+      "version": "2022-11-01"
+    },
+    {
+      "name": "Cisco-IOS-XE-bfd-oper",
+      "organization": "Cisco Systems, Inc.",
+      "version": "2022-11-01"
+    },
+    {
+      "name": "Cisco-IOS-XE-bgp-actions-rpc",
+      "organization": "Cisco Systems, Inc.",
+      "version": "2022-11-01"
+    },
+    {
+      "name": "Cisco-IOS-XE-bgp-common-oper",
+      "organization": "Cisco Systems, Inc.",
+      "version": "2022-11-01"
+    },
+    {
+      "name": "Cisco-IOS-XE-bgp-oper",
+      "organization": "Cisco Systems, Inc.",
+      "version": "2022-11-01"
+    },
+    {
+      "name": "Cisco-IOS-XE-bgp-route-oper",
+      "organization": "Cisco Systems, Inc.",
+      "version": "2022-11-01"
+    },
+    {
+      "name": "Cisco-IOS-XE-boot-integrity-oper",
+      "organization": "Cisco Systems, Inc.",
+      "version": "2022-11-01"
+    },
+    {
+      "name": "Cisco-IOS-XE-breakout-port-oper",
+      "organization": "Cisco Systems, Inc.",
+      "version": "2022-11-01"
+    },
+    {
+      "name": "Cisco-IOS-XE-cable-diag-oper",
+      "organization": "Cisco Systems, Inc.",
+      "version": "2022-11-01"
+    },
+    {
+      "name": "Cisco-IOS-XE-cdp-oper",
+      "organization": "Cisco Systems, Inc.",
+      "version": "2023-11-01"
+    },
+    {
+      "name": "Cisco-IOS-XE-cellwan-oper",
+      "organization": "Cisco Systems, Inc.",
+      "version": "2024-03-01"
+    },
+    {
+      "name": "Cisco-IOS-XE-cfm-oper",
+      "organization": "Cisco Systems, Inc.",
+      "version": "2022-11-01"
+    },
+    {
+      "name": "Cisco-IOS-XE-checkpoint-archive-oper",
+      "organization": "Cisco Systems, Inc.",
+      "version": "2022-11-01"
+    },
+    {
+      "name": "Cisco-IOS-XE-cloud-services-cfg",
+      "organization": "Cisco Systems, Inc.",
+      "version": "2024-07-01"
+    },
+    {
+      "name": "Cisco-IOS-XE-cloud-services-oper",
+      "organization": "Cisco Systems, Inc.",
+      "version": "2024-03-01"
+    },
+    {
+      "name": "Cisco-IOS-XE-cloud-services-rpc",
+      "organization": "Cisco Systems, Inc.",
+      "version": "2024-07-01"
+    },
+    {
+      "name": "Cisco-IOS-XE-common-types",
+      "organization": "Cisco Systems, Inc.",
+      "version": "2023-11-01"
+    },
+    {
+      "name": "Cisco-IOS-XE-crypto-actions-rpc",
+      "organization": "Cisco Systems, Inc.",
+      "version": "2022-11-01"
+    },
+    {
+      "name": "Cisco-IOS-XE-crypto-oper",
+      "organization": "Cisco Systems, Inc.",
+      "version": "2023-07-01"
+    },
+    {
+      "name": "Cisco-IOS-XE-crypto-pki-events",
+      "organization": "Cisco Systems, Inc.",
+      "version": "2023-11-01"
+    },
+    {
+      "name": "Cisco-IOS-XE-crypto-pki-oper",
+      "organization": "Cisco Systems, Inc.",
+      "version": "2022-11-01"
+    },
+    {
+      "name": "Cisco-IOS-XE-device-hardware-oper",
+      "organization": "Cisco Systems, Inc.",
+      "version": "2024-03-01"
+    },
+    {
+      "name": "Cisco-IOS-XE-dhcp-oper",
+      "organization": "Cisco Systems, Inc.",
+      "version": "2024-03-01"
+    },
+    {
+      "name": "Cisco-IOS-XE-dhcp-security-track-server-oper",
+      "organization": "Cisco Systems, Inc.",
+      "version": "2023-03-01"
+    },
+    {
+      "name": "Cisco-IOS-XE-dmi-common-types",
+      "organization": "Cisco Systems, Inc.",
+      "version": "2022-11-01"
+    },
+    {
+      "name": "Cisco-IOS-XE-dns-oper",
+      "organization": "Cisco Systems, Inc.",
+      "version": "2023-11-01"
+    },
+    {
+      "name": "Cisco-IOS-XE-eem-oper",
+      "organization": "Cisco Systems, Inc.",
+      "version": "2023-11-01"
+    },
+    {
+      "name": "Cisco-IOS-XE-efp-oper",
+      "organization": "Cisco Systems, Inc.",
+      "version": "2022-11-01"
+    },
+    {
+      "name": "Cisco-IOS-XE-eigrp-oper",
+      "organization": "Cisco Systems, Inc.",
+      "version": "2022-11-01"
+    },
+    {
+      "name": "Cisco-IOS-XE-environment-oper",
+      "organization": "Cisco Systems, Inc.",
+      "version": "2024-03-01"
+    },
+    {
+      "name": "Cisco-IOS-XE-ethernet-rpc",
+      "organization": "Cisco Systems, Inc.",
+      "version": "2022-11-01"
+    },
+    {
+      "name": "Cisco-IOS-XE-event-history-types",
+      "organization": "Cisco Systems, Inc.",
+      "version": "2022-11-01"
+    },
+    {
+      "name": "Cisco-IOS-XE-fib-events",
+      "organization": "Cisco Systems, Inc.",
+      "version": "2022-11-01"
+    },
+    {
+      "name": "Cisco-IOS-XE-fib-oper",
+      "organization": "Cisco Systems, Inc.",
+      "version": "2022-11-01"
+    },
+    {
+      "name": "Cisco-IOS-XE-flow-monitor-oper",
+      "organization": "Cisco Systems, Inc.",
+      "version": "2022-11-01"
+    },
+    {
+      "name": "Cisco-IOS-XE-gir-oper",
+      "organization": "Cisco Systems, Inc.",
+      "version": "2022-11-01"
+    },
+    {
+      "name": "Cisco-IOS-XE-gnmi-cfg",
+      "organization": "Cisco Systems, Inc.",
+      "version": "2024-07-01"
+    },
+    {
+      "name": "Cisco-IOS-XE-gnss-oper",
+      "organization": "Cisco Systems, Inc.",
+      "version": "2023-03-01"
+    },
+    {
+      "name": "Cisco-IOS-XE-grpc-tunnel-cfg",
+      "organization": "Cisco Systems, Inc.",
+      "version": "2023-03-01"
+    },
+    {
+      "name": "Cisco-IOS-XE-ha-oper",
+      "organization": "Cisco Systems, Inc.",
+      "version": "2022-11-01"
+    },
+    {
+      "name": "Cisco-IOS-XE-hsrp-events",
+      "organization": "Cisco Systems, Inc.",
+      "version": "2022-11-01"
+    },
+    {
+      "name": "Cisco-IOS-XE-hsrp-oper",
+      "organization": "Cisco Systems, Inc.",
+      "version": "2022-11-01"
+    },
+    {
+      "name": "Cisco-IOS-XE-identity-oper",
+      "organization": "Cisco Systems, Inc.",
+      "version": "2022-11-01"
+    },
+    {
+      "name": "Cisco-IOS-XE-install-event-types",
+      "organization": "Cisco Systems, Inc.",
+      "version": "2023-11-01"
+    },
+    {
+      "name": "Cisco-IOS-XE-install-events",
+      "organization": "Cisco Systems, Inc.",
+      "version": "2022-11-01"
+    },
+    {
+      "name": "Cisco-IOS-XE-install-oper",
+      "organization": "Cisco Systems, Inc.",
+      "version": "2024-03-01"
+    },
+    {
+      "name": "Cisco-IOS-XE-install-oper-types",
+      "organization": "Cisco Systems, Inc.",
+      "version": "2022-11-01"
+    },
+    {
+      "name": "Cisco-IOS-XE-install-rpc",
+      "organization": "Cisco Systems, Inc.",
+      "version": "2022-11-01"
+    },
+    {
+      "name": "Cisco-IOS-XE-interfaces-oper",
+      "organization": "Cisco Systems, Inc.",
+      "version": "2024-07-01"
+    },
+    {
+      "name": "Cisco-IOS-XE-ios-events-oper",
+      "organization": "Cisco Systems, Inc.",
+      "version": "2024-03-01"
+    },
+    {
+      "name": "Cisco-IOS-XE-utd-common-oper",
+      "organization": "Cisco Systems, Inc.",
+      "version": "2024-03-01"
+    },
+    {
+      "name": "Cisco-IOS-XE-ip-sla-events",
+      "organization": "Cisco Systems, Inc.",
+      "version": "2022-11-01"
+    },
+    {
+      "name": "Cisco-IOS-XE-ip-sla-oper",
+      "organization": "Cisco Systems, Inc.",
+      "version": "2023-11-01"
+    },
+    {
+      "name": "Cisco-IOS-XE-ipv6-oper",
+      "organization": "Cisco Systems, Inc.",
+      "version": "2022-11-01"
+    },
+    {
+      "name": "Cisco-IOS-XE-isis-oper",
+      "organization": "Cisco Systems, Inc.",
+      "version": "2022-11-01"
+    },
+    {
+      "name": "Cisco-IOS-XE-l2tp-oper",
+      "organization": "Cisco Systems, Inc.",
+      "version": "2022-11-01"
+    },
+    {
+      "name": "Cisco-IOS-XE-l2vpn-oper",
+      "organization": "Cisco Systems, Inc.",
+      "version": "2023-03-01"
+    },
+    {
+      "name": "Cisco-IOS-XE-lacp-oper",
+      "organization": "Cisco Systems, Inc.",
+      "version": "2024-03-01"
+    },
+    {
+      "name": "Cisco-IOS-XE-linecard-oper",
+      "organization": "Cisco Systems, Inc.",
+      "version": "2022-11-01"
+    },
+    {
+      "name": "Cisco-IOS-XE-lisp-oper",
+      "organization": "Cisco Systems, Inc.",
+      "version": "2024-07-01"
+    },
+    {
+      "name": "Cisco-IOS-XE-livetools-actions-rpc",
+      "organization": "Cisco Systems, Inc.",
+      "version": "2024-07-01"
+    },
+    {
+      "name": "Cisco-IOS-XE-livetools-common-types",
+      "organization": "Cisco Systems, Inc.",
+      "version": "2024-07-01"
+    },
+    {
+      "name": "Cisco-IOS-XE-livetools-oper",
+      "organization": "Cisco Systems, Inc.",
+      "version": "2024-07-01"
+    },
+    {
+      "name": "Cisco-IOS-XE-lldp-oper",
+      "organization": "Cisco Systems, Inc.",
+      "version": "2024-07-01"
+    },
+    {
+      "name": "Cisco-IOS-XE-logging-ios-actions-rpc",
+      "organization": "Cisco Systems, Inc.",
+      "version": "2023-03-01"
+    },
+    {
+      "name": "Cisco-IOS-XE-loop-detect-events",
+      "organization": "Cisco Systems, Inc.",
+      "version": "2024-03-01"
+    },
+    {
+      "name": "Cisco-IOS-XE-macsec-oper",
+      "organization": "Cisco Systems, Inc.",
+      "version": "2022-11-01"
+    },
+    {
+      "name": "Cisco-IOS-XE-matm-events",
+      "organization": "Cisco Systems, Inc.",
+      "version": "2024-03-01"
+    },
+    {
+      "name": "Cisco-IOS-XE-matm-oper",
+      "organization": "Cisco Systems, Inc.",
+      "version": "2022-11-01"
+    },
+    {
+      "name": "Cisco-IOS-XE-mcast-events",
+      "organization": "Cisco Systems, Inc.",
+      "version": "2024-07-01"
+    },
+    {
+      "name": "Cisco-IOS-XE-mdt-capabilities-oper",
+      "organization": "Cisco Systems, Inc.",
+      "version": "2022-11-01"
+    },
+    {
+      "name": "Cisco-IOS-XE-mdt-common-defs",
+      "organization": "Cisco Systems, Inc.",
+      "version": "2023-11-01"
+    },
+    {
+      "name": "Cisco-IOS-XE-mdt-cfg",
+      "organization": "Cisco Systems, Inc.",
+      "version": "2023-11-01"
+    },
+    {
+      "name": "Cisco-IOS-XE-mdt-oper",
+      "organization": "Cisco Systems, Inc.",
+      "version": "2022-11-01"
+    },
+    {
+      "name": "Cisco-IOS-XE-mdt-oper-v2",
+      "organization": "Cisco Systems, Inc.",
+      "version": "2023-11-01"
+    },
+    {
+      "name": "Cisco-IOS-XE-mdt-stats-oper",
+      "organization": "Cisco Systems, Inc.",
+      "version": "2022-11-01"
+    },
+    {
+      "name": "Cisco-IOS-XE-memory-oper",
+      "organization": "Cisco Systems, Inc.",
+      "version": "2022-11-01"
+    },
+    {
+      "name": "Cisco-IOS-XE-meraki-connect-oper",
+      "organization": "Cisco Systems, Inc.",
+      "version": "2024-07-01"
+    },
+    {
+      "name": "Cisco-IOS-XE-mka-oper",
+      "organization": "Cisco Systems, Inc.",
+      "version": "2022-11-01"
+    },
+    {
+      "name": "Cisco-IOS-XE-mlppp-oper",
+      "organization": "Cisco Systems, Inc.",
+      "version": "2022-11-01"
+    },
+    {
+      "name": "Cisco-IOS-XE-mpls-forwarding-oper",
+      "organization": "Cisco Systems, Inc.",
+      "version": "2022-11-01"
+    },
+    {
+      "name": "Cisco-IOS-XE-mpls-ldp-oper",
+      "organization": "Cisco Systems, Inc.",
+      "version": "2022-11-01"
+    },
+    {
+      "name": "Cisco-IOS-XE-mpls-te-oper",
+      "organization": "Cisco Systems, Inc.",
+      "version": "2022-11-01"
+    },
+    {
+      "name": "Cisco-IOS-XE-mroute-oper",
+      "organization": "Cisco Systems, Inc.",
+      "version": "2022-11-01"
+    },
+    {
+      "name": "Cisco-IOS-XE-msdp-oper",
+      "organization": "Cisco Systems, Inc.",
+      "version": "2023-07-01"
+    },
+    {
+      "name": "Cisco-IOS-XE-nat-oper",
+      "organization": "Cisco Systems, Inc.",
+      "version": "2022-11-01"
+    },
+    {
+      "name": "Cisco-IOS-XE-ncch-cfg",
+      "organization": "Cisco Systems, Inc.",
+      "version": "2022-11-01"
+    },
+    {
+      "name": "Cisco-IOS-XE-ncch-oper",
+      "organization": "Cisco Systems, Inc.",
+      "version": "2022-11-01"
+    },
+    {
+      "name": "Cisco-IOS-XE-netconf-diag-oper",
+      "organization": "Cisco Systems, Inc.",
+      "version": "2022-11-01"
+    },
+    {
+      "name": "Cisco-IOS-XE-netconf-diag-rpc",
+      "organization": "Cisco Systems, Inc.",
+      "version": "2022-11-01"
+    },
+    {
+      "name": "Cisco-IOS-XE-ntp-oper",
+      "organization": "Cisco Systems, Inc.",
+      "version": "2022-11-01"
+    },
+    {
+      "name": "Cisco-IOS-XE-nve-oper",
+      "organization": "Cisco Systems, Inc.",
+      "version": "2024-07-01"
+    },
+    {
+      "name": "Cisco-IOS-XE-ospf-common",
+      "organization": "Cisco Systems, Inc.",
+      "version": "2022-11-01"
+    },
+    {
+      "name": "Cisco-IOS-XE-ospf-events",
+      "organization": "Cisco Systems, Inc.",
+      "version": "2022-11-01"
+    },
+    {
+      "name": "Cisco-IOS-XE-ospf-oper",
+      "organization": "Cisco Systems, Inc.",
+      "version": "2022-11-01"
+    },
+    {
+      "name": "Cisco-IOS-XE-perf-measure-events",
+      "organization": "Cisco Systems, Inc.",
+      "version": "2024-03-01"
+    },
+    {
+      "name": "Cisco-IOS-XE-perf-measure-oper",
+      "organization": "Cisco Systems, Inc.",
+      "version": "2024-03-01"
+    },
+    {
+      "name": "Cisco-IOS-XE-pim-oper",
+      "organization": "Cisco Systems, Inc.",
+      "version": "2022-11-01"
+    },
+    {
+      "name": "Cisco-IOS-XE-platform-common-oper",
+      "organization": "Cisco Systems, Inc.",
+      "version": "2022-11-01"
+    },
+    {
+      "name": "Cisco-IOS-XE-platform-events-oper",
+      "organization": "Cisco Systems, Inc.",
+      "version": "2022-11-01"
+    },
+    {
+      "name": "Cisco-IOS-XE-platform-oper",
+      "organization": "Cisco Systems, Inc.",
+      "version": "2023-03-01"
+    },
+    {
+      "name": "Cisco-IOS-XE-platform-software-events",
+      "organization": "Cisco Systems, Inc.",
+      "version": "2022-11-01"
+    },
+    {
+      "name": "Cisco-IOS-XE-platform-software-oper",
+      "organization": "Cisco Systems, Inc.",
+      "version": "2023-11-01"
+    },
+    {
+      "name": "Cisco-IOS-XE-poe-health-oper",
+      "organization": "Cisco Systems, Inc.",
+      "version": "2022-11-01"
+    },
+    {
+      "name": "Cisco-IOS-XE-poe-oper",
+      "organization": "Cisco Systems, Inc.",
+      "version": "2024-07-01"
+    },
+    {
+      "name": "Cisco-IOS-XE-port-bounce-events",
+      "organization": "Cisco Systems, Inc.",
+      "version": "2024-07-01"
+    },
+    {
+      "name": "Cisco-IOS-XE-port-bounce-rpc",
+      "organization": "Cisco Systems, Inc.",
+      "version": "2024-07-01"
+    },
+    {
+      "name": "Cisco-IOS-XE-port-security-rpc",
+      "organization": "Cisco Systems, Inc.",
+      "version": "2022-11-01"
+    },
+    {
+      "name": "Cisco-IOS-XE-ppp-oper",
+      "organization": "Cisco Systems, Inc.",
+      "version": "2022-11-01"
+    },
+    {
+      "name": "Cisco-IOS-XE-process-cpu-oper",
+      "organization": "Cisco Systems, Inc.",
+      "version": "2022-11-01"
+    },
+    {
+      "name": "Cisco-IOS-XE-process-memory-oper",
+      "organization": "Cisco Systems, Inc.",
+      "version": "2022-11-01"
+    },
+    {
+      "name": "Cisco-IOS-XE-psecure-oper",
+      "organization": "Cisco Systems, Inc.",
+      "version": "2022-11-01"
+    },
+    {
+      "name": "Cisco-IOS-XE-sm-enum-types",
+      "organization": "Cisco Systems, Inc.",
+      "version": "2022-11-01"
+    },
+    {
+      "name": "Cisco-IOS-XE-sm-events-oper",
+      "organization": "Cisco Systems, Inc.",
+      "version": "2022-11-01"
+    },
+    {
+      "name": "Cisco-IOS-XE-spanning-tree-events",
+      "organization": "Cisco Systems, Inc.",
+      "version": "2024-03-01"
+    },
+    {
+      "name": "Cisco-IOS-XE-spanning-tree-oper",
+      "organization": "Cisco Systems, Inc.",
+      "version": "2024-07-01"
+    },
+    {
+      "name": "Cisco-IOS-XE-stack-member-oper",
+      "organization": "Cisco Systems, Inc.",
+      "version": "2023-11-01"
+    },
+    {
+      "name": "Cisco-IOS-XE-stack-mgr-events-oper",
+      "organization": "Cisco Systems, Inc.",
+      "version": "2023-11-01"
+    },
+    {
+      "name": "Cisco-IOS-XE-stack-oper",
+      "organization": "Cisco Systems, Inc.",
+      "version": "2023-11-01"
+    },
+    {
+      "name": "Cisco-IOS-XE-stack-power-rpc",
+      "organization": "Cisco Systems, Inc.",
+      "version": "2023-11-01"
+    },
+    {
+      "name": "Cisco-IOS-XE-stacking-oper",
+      "organization": "Cisco Systems, Inc.",
+      "version": "2022-11-01"
+    },
+    {
+      "name": "Cisco-IOS-XE-switch-cp-svl-oper",
+      "organization": "Cisco Systems, Inc.",
+      "version": "2022-11-01"
+    },
+    {
+      "name": "Cisco-IOS-XE-switch-dp-mac-learning-oper",
+      "organization": "Cisco Systems, Inc.",
+      "version": "2022-11-01"
+    },
+    {
+      "name": "Cisco-IOS-XE-switch-dp-punt-inject-oper",
+      "organization": "Cisco Systems, Inc.",
+      "version": "2022-11-01"
+    },
+    {
+      "name": "Cisco-IOS-XE-switch-dp-resources-oper",
+      "organization": "Cisco Systems, Inc.",
+      "version": "2022-11-01"
+    },
+    {
+      "name": "Cisco-IOS-XE-switch-ptp-dp-oper",
+      "organization": "Cisco Systems, Inc.",
+      "version": "2023-03-01"
+    },
+    {
+      "name": "Cisco-IOS-XE-switch-ptp-oper",
+      "organization": "Cisco Systems, Inc.",
+      "version": "2023-03-01"
+    },
+    {
+      "name": "Cisco-IOS-XE-switchport-oper",
+      "organization": "Cisco Systems, Inc.",
+      "version": "2024-03-01"
+    },
+    {
+      "name": "Cisco-IOS-XE-system-integrity-oper",
+      "organization": "Cisco Systems, Inc.",
+      "version": "2022-11-01"
+    },
+    {
+      "name": "Cisco-IOS-XE-tcam-oper",
+      "organization": "Cisco Systems, Inc.",
+      "version": "2023-07-01"
+    },
+    {
+      "name": "Cisco-IOS-XE-tech-support-events",
+      "organization": "Cisco Systems, Inc.",
+      "version": "2023-11-01"
+    },
+    {
+      "name": "Cisco-IOS-XE-tech-support-rpc",
+      "organization": "Cisco Systems, Inc.",
+      "version": "2023-11-01"
+    },
+    {
+      "name": "Cisco-IOS-XE-trace-events",
+      "organization": "Cisco Systems, Inc.",
+      "version": "2022-11-01"
+    },
+    {
+      "name": "Cisco-IOS-XE-trace-rpc",
+      "organization": "Cisco Systems, Inc.",
+      "version": "2022-11-01"
+    },
+    {
+      "name": "Cisco-IOS-XE-transceiver-oper",
+      "organization": "Cisco Systems, Inc.",
+      "version": "2023-11-01"
+    },
+    {
+      "name": "Cisco-IOS-XE-trustsec-oper",
+      "organization": "Cisco Systems, Inc.",
+      "version": "2022-11-01"
+    },
+    {
+      "name": "Cisco-IOS-XE-tunnel-oper",
+      "organization": "Cisco Systems, Inc.",
+      "version": "2022-11-01"
+    },
+    {
+      "name": "Cisco-IOS-XE-tunnel-types",
+      "organization": "Cisco Systems, Inc.",
+      "version": "2022-11-01"
+    },
+    {
+      "name": "Cisco-IOS-XE-udld-events",
+      "organization": "Cisco Systems, Inc.",
+      "version": "2024-03-01"
+    },
+    {
+      "name": "Cisco-IOS-XE-udld-oper",
+      "organization": "Cisco Systems, Inc.",
+      "version": "2024-03-01"
+    },
+    {
+      "name": "Cisco-IOS-XE-umbrella-oper",
+      "organization": "Cisco Systems, Inc.",
+      "version": "2022-11-01"
+    },
+    {
+      "name": "Cisco-IOS-XE-utd-actions-rpc",
+      "organization": "Cisco Systems, Inc.",
+      "version": "2022-11-01"
+    },
+    {
+      "name": "Cisco-IOS-XE-utd-oper",
+      "organization": "Cisco Systems, Inc.",
+      "version": "2024-03-01"
+    },
+    {
+      "name": "Cisco-IOS-XE-verify-events",
+      "organization": "Cisco Systems, Inc.",
+      "version": "2022-11-01"
+    },
+    {
+      "name": "Cisco-IOS-XE-verify-rpc",
+      "organization": "Cisco Systems, Inc.",
+      "version": "2022-11-01"
+    },
+    {
+      "name": "Cisco-IOS-XE-vlan-oper",
+      "organization": "Cisco Systems, Inc.",
+      "version": "2022-11-01"
+    },
+    {
+      "name": "Cisco-IOS-XE-vrf-oper",
+      "organization": "Cisco Systems, Inc.",
+      "version": "2022-11-01"
+    },
+    {
+      "name": "Cisco-IOS-XE-vrrp-oper",
+      "organization": "Cisco Systems, Inc.",
+      "version": "2022-11-01"
+    },
+    {
+      "name": "Cisco-IOS-XE-vrrp-types",
+      "organization": "Cisco Systems, Inc.",
+      "version": "2022-11-01"
+    },
+    {
+      "name": "Cisco-IOS-XE-xcopy-events",
+      "organization": "Cisco Systems, Inc.",
+      "version": "2022-11-01"
+    },
+    {
+      "name": "Cisco-IOS-XE-xcopy-rpc",
+      "organization": "Cisco Systems, Inc.",
+      "version": "2022-11-01"
+    },
+    {
+      "name": "Cisco-IOS-XE-yang-interfaces-cfg",
+      "organization": "Cisco Systems, Inc.",
+      "version": "2024-07-01"
+    },
+    {
+      "name": "Cisco-IOS-XE-yang-interfaces-oper",
+      "organization": "Cisco Systems, Inc.",
+      "version": "2023-07-01"
+    },
+    {
+      "name": "cisco-xe-ietf-ip-deviation",
+      "organization": "Cisco Systems, Inc.",
+      "version": "2016-08-10"
+    },
+    {
+      "name": "cisco-xe-ietf-ipv4-unicast-routing-deviation",
+      "organization": "Cisco Systems, Inc.",
+      "version": "2015-09-11"
+    },
+    {
+      "name": "cisco-xe-ietf-ipv6-unicast-routing-deviation",
+      "organization": "Cisco Systems, Inc.",
+      "version": "2015-09-11"
+    },
+    {
+      "name": "cisco-xe-ietf-ospf-deviation",
+      "organization": "Cisco Systems, Inc.",
+      "version": "2018-02-09"
+    },
+    {
+      "name": "cisco-xe-ietf-routing-deviation",
+      "organization": "Cisco Systems, Inc.",
+      "version": "2016-07-09"
+    },
+    {
+      "name": "cisco-xe-ietf-routing-ext",
+      "organization": "Cisco Systems, Inc.",
+      "version": "2024-03-01"
+    },
+    {
+      "name": "cisco-xe-openconfig-acl-deviation",
+      "organization": "Cisco Systems, Inc.",
+      "version": "2017-08-25"
+    },
+    {
+      "name": "cisco-xe-openconfig-acl-ext",
+      "organization": "Cisco",
+      "version": "1.0.2"
+    },
+    {
+      "name": "cisco-xe-openconfig-aft-deviation",
+      "organization": "Cisco Systems, Inc.",
+      "version": "2018-12-05"
+    },
+    {
+      "name": "cisco-xe-openconfig-bgp-deviation",
+      "organization": "Cisco Systems, Inc.",
+      "version": "2024-03-01"
+    },
+    {
+      "name": "cisco-xe-openconfig-bgp-policy-deviation",
+      "organization": "Cisco Systems, Inc.",
+      "version": "2017-07-24"
+    },
+    {
+      "name": "cisco-xe-openconfig-evpn-deviation",
+      "organization": "Cisco Systems, Inc.",
+      "version": "2024-07-01"
+    },
+    {
+      "name": "cisco-xe-openconfig-if-ethernet-ext",
+      "organization": "Cisco Systems, Inc.",
+      "version": "2017-10-30"
+    },
+    {
+      "name": "cisco-xe-openconfig-if-ip-deviation",
+      "organization": "Cisco Systems, Inc.",
+      "version": "2017-03-04"
+    },
+    {
+      "name": "cisco-xe-openconfig-if-poe-deviation",
+      "organization": "Cisco Systems, Inc.",
+      "version": "2021-10-29"
+    },
+    {
+      "name": "cisco-xe-openconfig-interfaces-deviation",
+      "organization": "Cisco Systems, Inc.",
+      "version": "2018-08-21"
+    },
+    {
+      "name": "cisco-xe-openconfig-interfaces-ext",
+      "organization": "Cisco Systems, Inc.",
+      "version": "2018-07-14"
+    },
+    {
+      "name": "cisco-xe-openconfig-isis-deviation",
+      "organization": "Cisco Systems, Inc.",
+      "version": "2018-12-05"
+    },
+    {
+      "name": "cisco-xe-openconfig-isis-policy-deviation",
+      "organization": "Cisco Systems, Inc.",
+      "version": "2020-07-30"
+    },
+    {
+      "name": "cisco-xe-openconfig-lldp-deviation",
+      "organization": "Cisco Systems, Inc.",
+      "version": "2018-07-25"
+    },
+    {
+      "name": "cisco-xe-openconfig-local-routing-deviation",
+      "organization": "Cisco Systems, Inc.",
+      "version": "2020-09-20"
+    },
+    {
+      "name": "cisco-xe-openconfig-mpls-deviation",
+      "organization": "Cisco Systems, Inc.",
+      "version": "2019-06-27"
+    },
+    {
+      "name": "cisco-xe-openconfig-network-instance-deviation",
+      "organization": "Cisco Systems, Inc.",
+      "version": "2023-10-13"
+    },
+    {
+      "name": "cisco-xe-openconfig-network-instance-l2-deviation",
+      "organization": "Cisco Systems, Inc.",
+      "version": "2023-11-01"
+    },
+    {
+      "name": "cisco-xe-openconfig-openflow-deviation",
+      "organization": "Cisco Systems, Inc.",
+      "version": "2019-07-01"
+    },
+    {
+      "name": "cisco-xe-openconfig-platform-ext",
+      "organization": "Cisco Systems",
+      "version": "2023-06-06"
+    },
+    {
+      "name": "cisco-xe-openconfig-rib-bgp-ext",
+      "organization": "Cisco Systems, Inc.",
+      "version": "2016-11-30"
+    },
+    {
+      "name": "openconfig-bgp-types",
+      "organization": "OpenConfig working group",
+      "version": "5.3.1"
+    },
+    {
+      "name": "cisco-xe-openconfig-routing-policy-deviation",
+      "organization": "Cisco Systems, Inc.",
+      "version": "2017-03-30"
+    },
+    {
+      "name": "cisco-xe-openconfig-segment-routing-deviation",
+      "organization": "Cisco Systems, Inc.",
+      "version": "2018-12-05"
+    },
+    {
+      "name": "cisco-xe-openconfig-spanning-tree-deviation",
+      "organization": "Cisco Systems",
+      "version": "2017-08-21"
+    },
+    {
+      "name": "cisco-xe-openconfig-spanning-tree-ext",
+      "organization": "Cisco Systems",
+      "version": "2017-10-24"
+    },
+    {
+      "name": "cisco-xe-openconfig-system-ext",
+      "organization": "Cisco",
+      "version": "1.0.2"
+    },
+    {
+      "name": "cisco-xe-openconfig-system-grpc-deviation",
+      "organization": "Cisco Systems, Inc.",
+      "version": "2021-10-22"
+    },
+    {
+      "name": "cisco-xe-openconfig-vlan-ext",
+      "organization": "Cisco Systems",
+      "version": "2017-06-14"
+    },
+    {
+      "name": "cisco-xe-switching-cat9k-openconfig-system-deviation",
+      "organization": "Cisco Systems, Inc.",
+      "version": "2018-07-01"
+    },
+    {
+      "name": "cisco-xe-switching-openconfig-if-ethernet-deviation",
+      "organization": "Cisco Systems, Inc.",
+      "version": "2021-07-01"
+    },
+    {
+      "name": "cisco-xe-switching-openconfig-interfaces-deviation",
+      "organization": "Cisco Systems, Inc.",
+      "version": "2018-12-12"
+    },
+    {
+      "name": "cisco-xe-switching-openconfig-lacp-deviation",
+      "organization": "Cisco Systems",
+      "version": "2022-08-25"
+    },
+    {
+      "name": "cisco-xe-switching-openconfig-platform-deviation",
+      "organization": "Cisco Systems, Inc.",
+      "version": "2021-09-20"
+    },
+    {
+      "name": "cisco-xe-switching-openconfig-vlan-deviation",
+      "organization": "Cisco Systems",
+      "version": "2017-03-17"
+    },
+    {
+      "name": "openconfig-inet-types",
+      "organization": "OpenConfig working group",
+      "version": "0.3.1"
+    },
+    {
+      "name": "iana-if-type",
+      "organization": "IANA",
+      "version": "2014-05-08"
+    },
+    {
+      "name": "ietf-diffserv-action",
+      "organization": "IETF NETMOD (Netmod Working Group) Working Group",
+      "version": "2015-04-07"
+    },
+    {
+      "name": "ietf-diffserv-classifier",
+      "organization": "IETF NETMOD (Netmod Working Group) Working Group",
+      "version": "2015-04-07"
+    },
+    {
+      "name": "ietf-diffserv-policy",
+      "organization": "IETF NETMOD (Netmod Working Group) Working Group",
+      "version": "2015-04-07"
+    },
+    {
+      "name": "ietf-diffserv-target",
+      "organization": "IETF NETMOD (Netmod Working Group) Working Group",
+      "version": "2015-04-07"
+    },
+    {
+      "name": "ietf-interfaces",
+      "organization": "IETF NETMOD (NETCONF Data Modeling Language) Working Group",
+      "version": "2014-05-08"
+    },
+    {
+      "name": "ietf-ipv6-unicast-routing",
+      "organization": "IETF NETMOD (NETCONF Data Modeling Language) Working Group",
+      "version": "2015-05-25"
+    },
+    {
+      "name": "ietf-ip",
+      "organization": "IETF NETMOD (NETCONF Data Modeling Language) Working Group",
+      "version": "2014-06-16"
+    },
+    {
+      "name": "ietf-interfaces-ext",
+      "organization": "IETF NETMOD (NETCONF Data Modeling Language) Working Group"
+    },
+    {
+      "name": "ietf-ipv4-unicast-routing",
+      "organization": "IETF NETMOD (NETCONF Data Modeling Language) Working Group",
+      "version": "2015-05-25"
+    },
+    {
+      "name": "ietf-key-chain",
+      "organization": "Cisco Systems\n170 West Tasman Drive\nSan Jose, CA 95134-1706\nUSA",
+      "version": "2015-02-24"
+    },
+    {
+      "name": "ietf-netconf-acm",
+      "organization": "IETF NETCONF (Network Configuration) Working Group",
+      "version": "2012-02-22"
+    },
+    {
+      "name": "ietf-ospf",
+      "organization": "Cisco Systems\n170 West Tasman Drive\nSan Jose, CA 95134-1706\nUSA",
+      "version": "2015-03-09"
+    },
+    {
+      "name": "ietf-routing",
+      "organization": "IETF NETMOD (NETCONF Data Modeling Language) Working Group",
+      "version": "2015-05-25"
+    },
+    {
+      "name": "ietf-routing-types",
+      "organization": "IETF Routing Area Working Group (rtgwg)",
+      "version": "2017-02-27"
+    },
+    {
+      "name": "openconfig-policy-types",
+      "organization": "OpenConfig working group",
+      "version": "2.0.1"
+    },
+    {
+      "name": "openconfig-spanning-tree-types",
+      "organization": "OpenConfig working group",
+      "version": "0.2.1"
+    },
+    {
+      "name": "openconfig-aaa",
+      "organization": "OpenConfig working group",
+      "version": "0.5.0"
+    },
+    {
+      "name": "openconfig-aaa-types",
+      "organization": "OpenConfig working group",
+      "version": "0.4.1"
+    },
+    {
+      "name": "openconfig-acl",
+      "organization": "OpenConfig working group",
+      "version": "1.0.0"
+    },
+    {
+      "name": "openconfig-yang-types",
+      "organization": "OpenConfig working group",
+      "version": "0.2.1"
+    },
+    {
+      "name": "openconfig-interfaces",
+      "organization": "OpenConfig working group",
+      "version": "2.3.0"
+    },
+    {
+      "name": "openconfig-packet-match-types",
+      "organization": "OpenConfig working group",
+      "version": "1.0.0"
+    },
+    {
+      "name": "openconfig-aft",
+      "organization": "OpenConfig working group",
+      "version": "2.2.0"
+    },
+    {
+      "name": "openconfig-aft-network-instance",
+      "organization": "OpenConfig working group",
+      "version": "0.3.1"
+    },
+    {
+      "name": "openconfig-aft-types",
+      "organization": "OpenConfig Working Group",
+      "version": "1.1.0"
+    },
+    {
+      "name": "openconfig-alarm-types",
+      "organization": "OpenConfig working group",
+      "version": "0.2.1"
+    },
+    {
+      "name": "openconfig-alarms",
+      "organization": "OpenConfig working group",
+      "version": "0.1.0"
+    },
+    {
+      "name": "openconfig-bfd",
+      "organization": "OpenConfig working group",
+      "version": "0.2.2"
+    },
+    {
+      "name": "openconfig-types",
+      "organization": "OpenConfig working group",
+      "version": "0.6.0"
+    },
+    {
+      "name": "openconfig-bgp",
+      "organization": "OpenConfig working group",
+      "version": "9.1.0"
+    },
+    {
+      "name": "openconfig-bgp-policy",
+      "organization": "OpenConfig working group",
+      "version": "6.1.0"
+    },
+    {
+      "name": "openconfig-evpn",
+      "organization": "OpenConfig working group",
+      "version": "0.5.0"
+    },
+    {
+      "name": "openconfig-evpn-types",
+      "organization": "OpenConfig working group",
+      "version": "0.2.0"
+    },
+    {
+      "name": "openconfig-extensions",
+      "organization": "OpenConfig working group",
+      "version": "2020-06-16"
+    },
+    {
+      "name": "openconfig-if-aggregate",
+      "organization": "OpenConfig working group",
+      "version": "2.3.0"
+    },
+    {
+      "name": "openconfig-if-ethernet",
+      "organization": "OpenConfig working group",
+      "version": "2.8.1"
+    },
+    {
+      "name": "openconfig-if-ip",
+      "organization": "OpenConfig working group",
+      "version": "2.3.0"
+    },
+    {
+      "name": "openconfig-if-ip-ext",
+      "organization": "OpenConfig working group",
+      "version": "2.3.0"
+    },
+    {
+      "name": "openconfig-if-poe",
+      "organization": "OpenConfig working group",
+      "version": "0.1.0"
+    },
+    {
+      "name": "openconfig-if-types",
+      "organization": "OpenConfig working group",
+      "version": "0.2.1"
+    },
+    {
+      "name": "openconfig-igmp",
+      "organization": "OpenConfig working group",
+      "version": "0.2.0"
+    },
+    {
+      "name": "openconfig-igmp-types",
+      "organization": "OpenConfig working group",
+      "version": "0.1.1"
+    },
+    {
+      "name": "openconfig-vlan",
+      "organization": "OpenConfig working group",
+      "version": "1.0.2"
+    },
+    {
+      "name": "openconfig-vlan-types",
+      "organization": "OpenConfig working group",
+      "version": "1.0.2"
+    },
+    {
+      "name": "openconfig-platform-transceiver",
+      "organization": "OpenConfig working group",
+      "version": "0.5.0"
+    },
+    {
+      "name": "openconfig-isis",
+      "organization": "OpenConfig working group",
+      "version": "0.2.1"
+    },
+    {
+      "name": "openconfig-isis-lsdb-types",
+      "organization": "OpenConfig working group",
+      "version": "0.2.1"
+    },
+    {
+      "name": "openconfig-isis-policy",
+      "organization": "OpenConfig working group",
+      "version": "0.2.1"
+    },
+    {
+      "name": "openconfig-isis-types",
+      "organization": "OpenConfig working group",
+      "version": "0.2.1"
+    },
+    {
+      "name": "openconfig-keychain",
+      "organization": "OpenConfig working group",
+      "version": "0.4.0"
+    },
+    {
+      "name": "openconfig-keychain-types",
+      "organization": "OpenConfig working group",
+      "version": "0.2.0"
+    },
+    {
+      "name": "openconfig-lacp",
+      "organization": "OpenConfig working group",
+      "version": "1.1.1"
+    },
+    {
+      "name": "openconfig-license",
+      "organization": "OpenConfig working group",
+      "version": "0.2.0"
+    },
+    {
+      "name": "openconfig-lldp",
+      "organization": "OpenConfig working group",
+      "version": "0.2.1"
+    },
+    {
+      "name": "openconfig-lldp-types",
+      "organization": "OpenConfig working group",
+      "version": "0.1.0"
+    },
+    {
+      "name": "openconfig-local-routing",
+      "organization": "OpenConfig working group",
+      "version": "1.0.0"
+    },
+    {
+      "name": "openconfig-macsec",
+      "organization": "OpenConfig working group",
+      "version": "0.1.0"
+    },
+    {
+      "name": "openconfig-macsec-types",
+      "organization": "OpenConfig working group",
+      "version": "0.1.0"
+    },
+    {
+      "name": "openconfig-messages",
+      "organization": "OpenConfig working group",
+      "version": "0.0.1"
+    },
+    {
+      "name": "openconfig-system-logging",
+      "organization": "OpenConfig working group",
+      "version": "0.3.0"
+    },
+    {
+      "name": "openconfig-mpls",
+      "organization": "OpenConfig working group",
+      "version": "2.1.0"
+    },
+    {
+      "name": "openconfig-mpls-ldp",
+      "organization": "OpenConfig working group",
+      "version": "2.1.0"
+    },
+    {
+      "name": "openconfig-mpls-rsvp",
+      "organization": "OpenConfig working group",
+      "version": "2.1.0"
+    },
+    {
+      "name": "openconfig-mpls-sr",
+      "organization": "OpenConfig working group",
+      "version": "2.1.0"
+    },
+    {
+      "name": "openconfig-mpls-types",
+      "organization": "OpenConfig working group",
+      "version": "3.4.0"
+    },
+    {
+      "name": "openconfig-network-instance",
+      "organization": "OpenConfig working group",
+      "version": "4.0.2"
+    },
+    {
+      "name": "openconfig-programming-errors",
+      "organization": "OpenConfig working group",
+      "version": "0.1.0"
+    },
+    {
+      "name": "openconfig-pcep",
+      "organization": "OpenConfig working group",
+      "version": "0.1.1"
+    },
+    {
+      "name": "openconfig-pim-types",
+      "organization": "OpenConfig working group",
+      "version": "0.1.1"
+    },
+    {
+      "name": "openconfig-ospf-types",
+      "organization": "OpenConfig working group",
+      "version": "0.1.3"
+    },
+    {
+      "name": "openconfig-routing-policy",
+      "organization": "OpenConfig working group",
+      "version": "2.0.1"
+    },
+    {
+      "name": "openconfig-network-instance-types",
+      "organization": "OpenConfig working group",
+      "version": "0.9.1"
+    },
+    {
+      "name": "openconfig-network-instance-l3",
+      "organization": "OpenConfig working group",
+      "version": "2.0.0"
+    },
+    {
+      "name": "openconfig-network-instance-policy",
+      "organization": "OpenConfig working group",
+      "version": "0.1.1"
+    },
+    {
+      "name": "openconfig-openflow",
+      "organization": "OpenConfig working group",
+      "version": "0.1.1"
+    },
+    {
+      "name": "openconfig-openflow-types",
+      "organization": "OpenConfig working group",
+      "version": "0.1.0"
+    },
+    {
+      "name": "openconfig-ospf-policy",
+      "organization": "OpenConfig working group",
+      "version": "0.1.3"
+    },
+    {
+      "name": "openconfig-ospfv2",
+      "organization": "OpenConfig working group",
+      "version": "0.2.3"
+    },
+    {
+      "name": "openconfig-packet-match",
+      "organization": "OpenConfig working group",
+      "version": "1.0.0"
+    },
+    {
+      "name": "openconfig-pim",
+      "organization": "OpenConfig working group",
+      "version": "0.4.1"
+    },
+    {
+      "name": "openconfig-platform",
+      "organization": "OpenConfig working group",
+      "version": "0.12.1"
+    },
+    {
+      "name": "openconfig-platform-types",
+      "organization": "OpenConfig working group",
+      "version": "0.10.1"
+    },
+    {
+      "name": "openconfig-platform-port",
+      "organization": "OpenConfig working group",
+      "version": "0.3.2"
+    },
+    {
+      "name": "openconfig-platform-cpu",
+      "organization": "OpenConfig working group",
+      "version": "0.1.1"
+    },
+    {
+      "name": "openconfig-platform-fan",
+      "organization": "OpenConfig working group",
+      "version": "0.1.1"
+    },
+    {
+      "name": "openconfig-platform-linecard",
+      "organization": "OpenConfig working group",
+      "version": "0.1.1"
+    },
+    {
+      "name": "openconfig-platform-psu",
+      "organization": "OpenConfig working group",
+      "version": "0.2.1"
+    },
+    {
+      "name": "openconfig-policy-forwarding",
+      "organization": "OpenConfig working group",
+      "version": "0.3.0"
+    },
+    {
+      "name": "openconfig-procmon",
+      "organization": "OpenConfig working group",
+      "version": "0.3.0"
+    },
+    {
+      "name": "openconfig-rib-bgp",
+      "organization": "OpenConfig working group",
+      "version": "0.8.1"
+    },
+    {
+      "name": "openconfig-rib-bgp-ext",
+      "organization": "OpenConfig working group",
+      "version": "0.6.0"
+    },
+    {
+      "name": "openconfig-rib-bgp-types",
+      "organization": "OpenConfig working group",
+      "version": "0.5.0"
+    },
+    {
+      "name": "openconfig-route-summary",
+      "organization": "OpenConfig working group",
+      "version": "1.0.0"
+    },
+    {
+      "name": "openconfig-segment-routing",
+      "organization": "OpenConfig working group",
+      "version": "0.0.3"
+    },
+    {
+      "name": "openconfig-segment-routing-types",
+      "organization": "OpenConfig working group",
+      "version": "0.2.0"
+    },
+    {
+      "name": "openconfig-spanning-tree",
+      "organization": "OpenConfig working group",
+      "version": "0.2.1"
+    },
+    {
+      "name": "openconfig-system",
+      "organization": "OpenConfig working group",
+      "version": "0.10.1"
+    },
+    {
+      "name": "openconfig-system-grpc",
+      "organization": "OpenConfig working group",
+      "version": "0.1.1"
+    },
+    {
+      "name": "openconfig-system-terminal",
+      "organization": "OpenConfig working group",
+      "version": "0.3.0"
+    },
+    {
+      "name": "openconfig-transport-types",
+      "organization": "OpenConfig working group",
+      "version": "0.5.0"
+    }
+  ],
+  "encodings": [
+    "JSON",
+    "JSON_IETF",
+    "PROTO"
+  ]
+}

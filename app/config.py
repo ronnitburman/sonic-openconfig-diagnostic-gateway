@@ -12,11 +12,13 @@ class Settings(BaseSettings):
     gnmi_port: int = 50052
     gnmi_username: str = ""
     gnmi_password: str = ""
-    gnmi_insecure: bool = True
+    gnmi_insecure: bool = False  # false = use TLS, true = plaintext
+    gnmi_skip_verify: bool = True  # skip TLS certificate verification
 
     gnoi_host: str = ""
     gnoi_port: int = 50052
-    gnoi_insecure: bool = True
+    gnoi_insecure: bool = False
+    gnoi_skip_verify: bool = True
 
     audit_log_path: str = "./data/audit.jsonl"
 
