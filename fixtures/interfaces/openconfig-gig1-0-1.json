@@ -1,0 +1,168 @@
+[
+  {
+    "source": "devnetsandboxiosxec9k.cisco.com:9339",
+    "timestamp": 1782449562292050581,
+    "time": "2026-06-26T00:52:42.292050581-04:00",
+    "updates": [
+      {
+        "Path": "interfaces/interface[name=GigabitEthernet1/0/1]",
+        "values": {
+          "interfaces/interface": {
+            "config": {
+              "enabled": false,
+              "name": "GigabitEthernet1/0/1",
+              "type": "iana-if-type:ethernetCsmacd"
+            },
+            "name": "GigabitEthernet1/0/1",
+            "openconfig-if-ethernet:ethernet": {
+              "config": {
+                "auto-negotiate": false,
+                "cisco-xe-openconfig-if-ethernet-ext:switchport": true,
+                "enable-flow-control": true,
+                "mac-address": "00:50:56:bf:c8:2a"
+              },
+              "openconfig-if-poe:poe": {
+                "config": {
+                  "enabled": false
+                }
+              },
+              "state": {
+                "auto-negotiate": true,
+                "cisco-xe-openconfig-if-ethernet-ext:switchport": true,
+                "counters": {
+                  "in-8021q-frames": "0",
+                  "in-crc-errors": "0",
+                  "in-fragment-frames": "0",
+                  "in-jabber-frames": "0",
+                  "in-mac-control-frames": "0",
+                  "in-mac-pause-frames": "0",
+                  "in-oversize-frames": "0",
+                  "out-8021q-frames": "0",
+                  "out-mac-control-frames": "0",
+                  "out-mac-pause-frames": "0"
+                },
+                "enable-flow-control": false,
+                "hw-mac-address": "00:50:56:bf:c8:2a",
+                "mac-address": "00:50:56:bf:c8:2a",
+                "negotiated-duplex-mode": "FULL",
+                "negotiated-port-speed": "SPEED_1GB",
+                "port-speed": "SPEED_1GB"
+              }
+            },
+            "state": {
+              "admin-status": "DOWN",
+              "counters": {
+                "in-broadcast-pkts": "0",
+                "in-discards": "0",
+                "in-errors": "0",
+                "in-fcs-errors": "0",
+                "in-multicast-pkts": "0",
+                "in-octets": "0",
+                "in-unicast-pkts": "0",
+                "in-unknown-protos": "0",
+                "last-clear": "1782448093699000000",
+                "out-broadcast-pkts": "0",
+                "out-discards": "0",
+                "out-errors": "0",
+                "out-multicast-pkts": "0",
+                "out-octets": "0",
+                "out-unicast-pkts": "0"
+              },
+              "enabled": false,
+              "ifindex": 8,
+              "last-change": "1782448380432000000",
+              "name": "GigabitEthernet1/0/1",
+              "openconfig-platform-port:hardware-port": "GigabitEthernet1/0/1",
+              "oper-status": "DOWN",
+              "type": "iana-if-type:ethernetCsmacd"
+            },
+            "subinterfaces": {
+              "subinterface": [
+                {
+                  "config": {
+                    "enabled": false,
+                    "index": 0
+                  },
+                  "index": 0,
+                  "openconfig-if-ip:ipv4": {
+                    "proxy-arp": {
+                      "config": {
+                        "mode": "ALL"
+                      },
+                      "state": {
+                        "mode": "ALL"
+                      }
+                    },
+                    "state": {
+                      "counters": {
+                        "in-discarded-pkts": "0",
+                        "in-error-pkts": "0",
+                        "in-forwarded-octets": "0",
+                        "in-forwarded-pkts": "0",
+                        "in-octets": "0",
+                        "in-pkts": "0",
+                        "out-discarded-pkts": "0",
+                        "out-error-pkts": "0",
+                        "out-forwarded-octets": "0",
+                        "out-forwarded-pkts": "0",
+                        "out-octets": "0",
+                        "out-pkts": "0"
+                      }
+                    }
+                  },
+                  "openconfig-if-ip:ipv6": {
+                    "config": {
+                      "enabled": false
+                    },
+                    "state": {
+                      "counters": {
+                        "in-discarded-pkts": "0",
+                        "in-error-pkts": "0",
+                        "in-forwarded-octets": "0",
+                        "in-forwarded-pkts": "0",
+                        "in-octets": "0",
+                        "in-pkts": "0",
+                        "out-discarded-pkts": "0",
+                        "out-error-pkts": "0",
+                        "out-forwarded-octets": "0",
+                        "out-forwarded-pkts": "0",
+                        "out-octets": "0",
+                        "out-pkts": "0"
+                      },
+                      "enabled": false
+                    }
+                  },
+                  "state": {
+                    "admin-status": "DOWN",
+                    "counters": {
+                      "in-broadcast-pkts": "0",
+                      "in-discards": "0",
+                      "in-errors": "0",
+                      "in-fcs-errors": "0",
+                      "in-multicast-pkts": "0",
+                      "in-octets": "0",
+                      "in-unicast-pkts": "0",
+                      "in-unknown-protos": "0",
+                      "last-clear": "1782448093699000000",
+                      "out-broadcast-pkts": "0",
+                      "out-discards": "0",
+                      "out-errors": "0",
+                      "out-multicast-pkts": "0",
+                      "out-octets": "0",
+                      "out-unicast-pkts": "0"
+                    },
+                    "enabled": false,
+                    "ifindex": 8,
+                    "last-change": "1782448380432000000",
+                    "name": "GigabitEthernet1/0/1",
+                    "oper-status": "DOWN"
+                  }
+                }
+              ]
+            }
+          }
+        }
+      }
+    ]
+  }
+]
