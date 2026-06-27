@@ -1,0 +1,114 @@
+{
+  "info": {
+    "name": "SONiC OpenConfig Diagnostic Gateway",
+    "description": "REST API for the SONiC OpenConfig Diagnostic Gateway — discover devices, run interface diagnostics, and safely apply configuration changes.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Health",
+      "item": [
+        {
+          "name": "Health Check",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/health",
+              "host": ["{{base_url}}"],
+              "path": ["health"]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Discovery",
+      "item": [
+        {
+          "name": "Discover Device Capabilities",
+          "request": {
+            "method": "POST",
+            "header": [
+              {"key": "Content-Type", "value": "application/json"}
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"device_id\": \"iosxe-sandbox\"\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/v1/devices/discover",
+              "host": ["{{base_url}}"],
+              "path": ["v1", "devices", "discover"]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Diagnostics",
+      "item": [
+        {
+          "name": "Diagnose Healthy Interface",
+          "request": {
+            "method": "POST",
+            "header": [
+              {"key": "Content-Type", "value": "application/json"}
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"device_id\": \"iosxe-sandbox\",\n  \"interface\": \"GigabitEthernet0/0\"\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/v1/diagnostics/interface",
+              "host": ["{{base_url}}"],
+              "path": ["v1", "diagnostics", "interface"]
+            }
+          }
+        },
+        {
+          "name": "Diagnose Degraded Interface (Vlan1)",
+          "request": {
+            "method": "POST",
+            "header": [
+              {"key": "Content-Type", "value": "application/json"}
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"device_id\": \"iosxe-sandbox\",\n  \"interface\": \"Vlan1\"\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/v1/diagnostics/interface",
+              "host": ["{{base_url}}"],
+              "path": ["v1", "diagnostics", "interface"]
+            }
+          }
+        },
+        {
+          "name": "Diagnose with Expectations",
+          "request": {
+            "method": "POST",
+            "header": [
+              {"key": "Content-Type", "value": "application/json"}
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"device_id\": \"iosxe-sandbox\",\n  \"interface\": \"GigabitEthernet1/0/1\",\n  \"expected\": {\n    \"enabled\": true,\n    \"oper_status\": \"UP\",\n    \"speed_mbps\": 1000\n  }\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/v1/diagnostics/interface",
+              "host": ["{{base_url}}"],
+              "path": ["v1", "diagnostics", "interface"]
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "variable": [
+    {
+      "key": "base_url",
+      "value": "http://localhost:8080"
+    }
+  ]
+}

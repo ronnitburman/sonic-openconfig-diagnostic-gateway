@@ -38,6 +38,18 @@ class FixtureDeviceAdapter:
             return json.load(f)
 
     def get_interface_snapshot(self, interface_name: str) -> InterfaceSnapshot:
+        # Validate the device is known before attempting interface lookup.
+        # Without this, an unknown device_id would fall through to the
+        # shared raw-interface-state fixture and report a misleading
+        # "interface not found" error.
+        cap_path = self._fixture_dir / "capabilities" / f"{self._device_id}.json"
+        if not cap_path.exists():
+            raise FileNotFoundError(
+                f"No fixture data for device '{self._device_id}'. "
+                f"Available device fixtures: "
+                f"{[p.stem for p in (self._fixture_dir / 'capabilities').glob('*.json')]}"
+            )
+
         raw = self._load_interface_fixture(interface_name)
 
         # Prefer OpenConfig response when available
