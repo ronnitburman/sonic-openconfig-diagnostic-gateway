@@ -9,7 +9,7 @@ class DeviceTarget(BaseModel):
     port: int = 50052
     username: str = ""
     password: str = ""
-    insecure: bool = True
+    insecure: bool | None = None  # None → use env setting
     preferred_model_family: str = "openconfig"
 
 
