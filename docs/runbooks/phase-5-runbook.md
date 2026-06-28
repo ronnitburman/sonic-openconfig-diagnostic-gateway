@@ -100,18 +100,20 @@ curl -s -X POST http://localhost:8080/v1/diagnostics/interface \
   -d '{"device_id": "test"}' | python3 -m json.tool
 # → 422 validation error
 
-# Unknown device
+# Unknown device (fixture mode)
 curl -s -X POST http://localhost:8080/v1/diagnostics/interface \
   -H "Content-Type: application/json" \
   -d '{"device_id": "ghost", "interface": "Eth1"}' | python3 -m json.tool
-# → 422 or 503
+# → 503 "Fixture data not available for device 'ghost'. Available: ['iosxe-sandbox']"
 
-# Non-existent interface
+# Non-existent interface (fixture mode)
 curl -s -X POST http://localhost:8080/v1/diagnostics/interface \
   -H "Content-Type: application/json" \
   -d '{"device_id": "iosxe-sandbox", "interface": "NonExistent99/99/99"}' | python3 -m json.tool
-# → 422
+# → 422 "Interface 'NonExistent99/99/99' not found in response. Available: [...]"
 ```
+
+> **Note:** Unknown device (503) and non-existent interface (422) are now distinct error categories — the fixture adapter validates device existence before attempting interface lookup.
 
 ---
 
@@ -127,19 +129,24 @@ curl -s -X POST http://localhost:8080/v1/diagnostics/interface \
 ## Live Mode (requires sandbox access)
 
 ```bash
-# Start with live mode
+# Start with live mode — MUST cd to project root so .env is found
+cd /path/to/sonic-openconfig-diagnostic-gateway
+kill $(lsof -t -i:8080) 2>/dev/null
 DEVICE_MODE=live uvicorn app.main:app --host 0.0.0.0 --port 8080
 
 # Discovery should show real capabilities
 curl -s -X POST http://localhost:8080/v1/devices/discover \
   -H "Content-Type: application/json" \
-  -d '{"device_id": "iosxe-sandbox"}'
+  -d '{"device_id": "iosxe-sandbox"}' | python3 -m json.tool
+# → gnmi_reachable: true, model_support: openconfig_interfaces + cisco_native
 
 # Diagnostic with live data
 curl -s -X POST http://localhost:8080/v1/diagnostics/interface \
   -H "Content-Type: application/json" \
-  -d '{"device_id": "iosxe-sandbox", "interface": "GigabitEthernet0/0"}'
+  -d '{"device_id": "iosxe-sandbox", "interface": "GigabitEthernet0/0"}' | python3 -m json.tool
 ```
+
+> **Important:** Always `cd` to the project root before starting the server. The `.env` file is loaded relative to the working directory. Starting from a different directory causes `gnmi_port` to default to 50052 (instead of 9339 from `.env`) and gNMI connections will fail.
 
 ---
 

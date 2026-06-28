@@ -1,4 +1,5 @@
 from pydantic_settings import BaseSettings
+from typing import List
 
 
 class Settings(BaseSettings):
@@ -7,6 +8,10 @@ class Settings(BaseSettings):
     app_port: int = 8080
 
     device_mode: str = "fixture"  # "fixture" | "live"
+
+    # Known device IDs — requests with unknown IDs are rejected.
+    # In fixture mode, each ID needs a corresponding capabilities fixture.
+    known_device_ids: List[str] = ["iosxe-sandbox"]
 
     gnmi_host: str = ""
     gnmi_port: int = 50052

@@ -27,3 +27,14 @@ class CiscoNativeIOSXEAdapter:
         raw_list = self.client.get(path)
         iface_data = _extract_interface_data(raw_list, interface_name)
         return parse_cisco_native_response(iface_data, interface_name)
+
+    def set_interface_description(
+        self, interface_name: str, description: str
+    ) -> dict:
+        """Set the description on an interface via gNMI Set.
+
+        Uses the OpenConfig path since Cisco-native YANG for config
+        writes may differ from the oper model used for reads.
+        """
+        path = f"/interfaces/interface[name={interface_name}]/config/description"
+        return self.client.set([{"path": path, "value": description}])

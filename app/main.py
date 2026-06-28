@@ -19,11 +19,13 @@ from app.api.health import router as health_router
 from app.api.discovery import router as discovery_router
 from app.api.diagnostics import router as diagnostics_router
 from app.api.changes import router as changes_router
+from app.api.operations import router as operations_router
 
 app.include_router(health_router)
 app.include_router(discovery_router)
 app.include_router(diagnostics_router)
 app.include_router(changes_router)
+app.include_router(operations_router)
 
 # ── Global error handlers ────────────────────────────────────────────
 

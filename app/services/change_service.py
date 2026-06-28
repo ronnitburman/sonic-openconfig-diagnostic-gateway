@@ -46,6 +46,13 @@ class ChangeService:
         current_description = snapshot.description or ""
 
         # ── 2. Validate ─────────────────────────────────────────────
+        # Ensure the interface actually exists on the device.
+        if snapshot.admin_status is None and snapshot.oper_status is None:
+            raise ValueError(
+                f"Interface '{interface}' not found on device "
+                f"'{device.device_id}'. The interface may not exist."
+            )
+
         if len(description) > self.MAX_DESCRIPTION_LENGTH:
             raise ValueError(
                 f"Description exceeds maximum length of "

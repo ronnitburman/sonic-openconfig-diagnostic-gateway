@@ -63,6 +63,30 @@ class GnmiClient:
         except json.JSONDecodeError:
             raise GnmiClientError(f"Non-JSON Get response for '{path}': {raw[:200]}")
 
+    def set(self, updates: list[dict], encoding: str = "JSON_IETF") -> dict:
+        """Run gNMI Set RPC with *updates* and return the parsed response.
+
+        Each update dict should have ``path`` and ``value`` keys.
+        The value is serialised as a JSON string for the gNMI Update.
+        """
+        args = self._base_args() + [
+            "set",
+            "--encoding", encoding,
+            "--format", "json",
+        ]
+        for update in updates:
+            # gnmic set uses separate --update-path / --update-value flags.
+            # The inline --update "path:value" format chokes on paths with
+            # brackets and slash-heavy values.
+            path = update["path"].lstrip("/")
+            args.extend(["--update-path", path])
+            args.extend(["--update-value", str(update["value"])])
+        raw = self._run(args)
+        try:
+            return json.loads(raw)
+        except json.JSONDecodeError:
+            raise GnmiClientError(f"Non-JSON Set response: {raw[:200]}")
+
     # ------------------------------------------------------------------
     # Internal
     # ------------------------------------------------------------------

@@ -19,6 +19,13 @@ def create_adapter(device: DeviceTarget) -> DeviceAdapter:
         Connects via gNMI, discovers capabilities, and selects either
         OpenConfigIOSXEAdapter or CiscoNativeIOSXEAdapter.
     """
+    # ── Validate device_id ────────────────────────────────────────
+    if device.device_id not in settings.known_device_ids:
+        raise ValueError(
+            f"Unknown device '{device.device_id}'. "
+            f"Known devices: {settings.known_device_ids}"
+        )
+
     # ── Fixture mode ──────────────────────────────────────────────
     if settings.device_mode == "fixture":
         return FixtureDeviceAdapter(device.device_id)
