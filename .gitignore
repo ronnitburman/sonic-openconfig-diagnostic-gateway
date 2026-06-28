@@ -9,3 +9,5 @@ venv/
 dist/
 *.egg-info/
 data/
+sonic-gateway-bundle.tar.gz
+wheels/
