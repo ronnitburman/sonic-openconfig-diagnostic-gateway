@@ -24,6 +24,8 @@ async def discover_device(device: DeviceTarget):
 
     try:
         result = service.discover(device)
+    except ValueError as exc:
+        raise HTTPException(status_code=422, detail=str(exc))
     except FileNotFoundError as exc:
         raise HTTPException(
             status_code=503,

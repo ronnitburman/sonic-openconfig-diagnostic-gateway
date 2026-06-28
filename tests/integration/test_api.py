@@ -29,7 +29,7 @@ def test_discover_fixture_mode():
 
 def test_discover_unknown_device():
     resp = client.post("/v1/devices/discover", json={"device_id": "ghost-device"})
-    assert resp.status_code == 503
+    assert resp.status_code == 422  # unknown device_id rejected by create_adapter()
 
 
 # ── Diagnostics ──────────────────────────────────────────────────────
@@ -144,7 +144,7 @@ def test_change_description_unknown_device():
         "interface": "Eth1",
         "description": "test",
     })
-    assert resp.status_code == 503
+    assert resp.status_code == 422  # unknown device_id rejected by create_adapter()
 
 
 def test_change_description_too_long():
@@ -165,6 +165,59 @@ def test_change_description_missing_interface():
     assert resp.status_code == 422
 
 
+# ── Operations ───────────────────────────────────────────────────────
+
+def test_gnoi_probe_fixture_mode():
+    """gNOI probe in fixture mode returns the pre-captured sandbox result."""
+    resp = client.post("/v1/operations/gnoi/probe", json={
+        "device_id": "iosxe-sandbox",
+    })
+    assert resp.status_code == 200
+    data = resp.json()
+    assert "gnoi_reachable" in data
+    assert "services" in data
+    assert "notes" in data
+    # Safety: destructive operations must be blocked
+    assert data["services"]["factory_reset"] == "INTENTIONALLY_DISABLED"
+    assert data["services"]["os"] == "NOT_TESTED"
+
+
+def test_gnoi_probe_unknown_device():
+    resp = client.post("/v1/operations/gnoi/probe", json={
+        "device_id": "ghost-device",
+    })
+    assert resp.status_code == 200  # returns defaults, not an error
+    data = resp.json()
+    assert data["gnoi_reachable"] is False
+    assert data["services"]["factory_reset"] == "INTENTIONALLY_DISABLED"
+
+
+def test_grpc_security_fixture_mode():
+    """gRPC security posture report returns valid structure."""
+    resp = client.post("/v1/operations/grpc-security", json={
+        "device_id": "iosxe-sandbox",
+    })
+    assert resp.status_code == 200
+    data = resp.json()
+    assert "risk_level" in data
+    assert "recommendations" in data
+    assert isinstance(data["recommendations"], list)
+    assert data["gnmi_transport"] in ("INSECURE_LAB", "TLS")
+    assert data["gnoi_certificate_support"] in (
+        "SUPPORTED", "UNSUPPORTED", "UNKNOWN"
+    )
+
+
+def test_gnoi_probe_rejects_missing_device_id():
+    resp = client.post("/v1/operations/gnoi/probe", json={})
+    assert resp.status_code == 422
+
+
+def test_grpc_security_rejects_missing_device_id():
+    resp = client.post("/v1/operations/grpc-security", json={})
+    assert resp.status_code == 422
+
+
 # ── OpenAPI ──────────────────────────────────────────────────────────
 
 def test_openapi_schema_accessible():
@@ -177,3 +230,5 @@ def test_openapi_schema_accessible():
     assert "/v1/devices/discover" in paths
     assert "/v1/diagnostics/interface" in paths
     assert "/v1/changes/interface-description" in paths
+    assert "/v1/operations/gnoi/probe" in paths
+    assert "/v1/operations/grpc-security" in paths

@@ -11,6 +11,8 @@ class DiscoveryService:
         try:
             adapter = create_adapter(device)
             caps = adapter.discover_capabilities()
+        except ValueError:
+            raise  # validation errors (unknown device, etc.) → 422
         except Exception as exc:
             return {
                 "device_id": device.device_id,
