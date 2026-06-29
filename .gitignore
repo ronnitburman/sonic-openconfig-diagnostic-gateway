@@ -11,3 +11,7 @@ dist/
 data/
 sonic-gateway-bundle.tar.gz
 wheels/
+
+# Phase 9 — Debian packaging
+*.deb
+packaging/debian/usr/

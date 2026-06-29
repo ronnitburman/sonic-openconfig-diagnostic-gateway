@@ -1,0 +1,33 @@
+[Unit]
+Description=SONiC OpenConfig Diagnostic Gateway
+Documentation=https://github.com/your-org/sonic-openconfig-diagnostic-gateway
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=root
+Group=root
+WorkingDirectory=/usr/lib/sonic-openconfig-diagnostic-gateway
+Environment=PYTHONPATH=/usr/lib/sonic-openconfig-diagnostic-gateway
+EnvironmentFile=/etc/sonic-openconfig-diagnostic-gateway/gateway.env
+ExecStart=/usr/lib/sonic-openconfig-diagnostic-gateway/venv/bin/uvicorn app.main:app --host 0.0.0.0 --port 8080
+ExecReload=/bin/kill -HUP $MAINPID
+Restart=on-failure
+RestartSec=5
+StandardOutput=journal
+StandardError=journal
+SyslogIdentifier=sonic-openconfig-diagnostic-gateway
+
+# Security hardening
+NoNewPrivileges=yes
+PrivateTmp=yes
+ProtectSystem=strict
+ProtectHome=yes
+ReadWritePaths=/var/log/sonic-openconfig-diagnostic-gateway
+
+# Allow network access (required for REST API and gNMI)
+PrivateNetwork=no
+
+[Install]
+WantedBy=multi-user.target

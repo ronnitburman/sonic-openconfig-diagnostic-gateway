@@ -1,0 +1,21 @@
+#!/bin/bash
+# prerm — Runs before dpkg -r (remove) or dpkg -P (purge)
+set -e
+
+SERVICE="sonic-openconfig-diagnostic-gateway"
+
+echo "=== SONiC OpenConfig Diagnostic Gateway — Pre-removal ==="
+
+# Stop the service if running
+if systemctl is-active --quiet "${SERVICE}.service" 2>/dev/null; then
+    echo "Stopping ${SERVICE}..."
+    systemctl stop "${SERVICE}.service"
+fi
+
+# Disable the service if enabled
+if systemctl is-enabled --quiet "${SERVICE}.service" 2>/dev/null; then
+    echo "Disabling ${SERVICE}..."
+    systemctl disable "${SERVICE}.service"
+fi
+
+echo "Pre-removal complete."
