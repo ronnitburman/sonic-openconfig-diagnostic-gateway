@@ -1,0 +1,16 @@
+Package: sonic-openconfig-diagnostic-gateway
+Version: 0.1.0
+Section: net
+Priority: optional
+Architecture: amd64
+Depends: python3 (>= 3.9)
+Maintainer: SONiC OpenConfig Team
+Description: SONiC OpenConfig Diagnostic Gateway
+ A network diagnostic gateway that exposes a REST API and uses
+ gNMI/gNOI to probe and diagnose Cisco IOS XE interfaces via
+ OpenConfig and Cisco-native YANG models.
+ .
+ Supports fixture mode for offline development and testing,
+ live gNMI mode for real device interaction, safe interface
+ description changes with audit logging, and gNOI capability
+ probing with destructive operations intentionally disabled.
