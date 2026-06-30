@@ -59,11 +59,12 @@ mkdir -p "${GNMIC_DIR}"
 
 # Download gnmic for linux/amd64 (matches Architecture: amd64 in control)
 GNMIC_URL="https://github.com/openconfig/gnmic/releases/download/v${GNMIC_VERSION}/gnmic_${GNMIC_VERSION}_Linux_x86_64.tar.gz"
-if curl -fSL "${GNMIC_URL}" 2>/dev/null | tar xz -C "${GNMIC_DIR}" --strip-components=1 gnmic 2>/dev/null; then
+if curl -fSL "${GNMIC_URL}" 2>/dev/null | tar xz -C "${GNMIC_DIR}" 2>/dev/null; then
     chmod +x "${GNMIC_DIR}/gnmic"
     echo "  gnmic ${GNMIC_VERSION} bundled"
 else
     echo "  WARNING: Could not download gnmic — it must be installed manually on the target"
+    echo "  URL: ${GNMIC_URL}"
 fi
 
 # Copy helper scripts (optional)
