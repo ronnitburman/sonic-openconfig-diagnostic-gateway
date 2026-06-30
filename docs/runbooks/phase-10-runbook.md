@@ -115,9 +115,11 @@ tar czf gateway-repo.tar.gz \
 
 scp -i your-key.pem gateway-repo.tar.gz ubuntu@<ec2-ip>:~/
 
-# On EC2
-tar xzf gateway-repo.tar.gz
-# Produces: app/ fixtures/ scripts/ packaging/ pyproject.toml .env.sonic.example
+# On EC2 — extract into a dedicated directory, then cd into it
+mkdir -p ~/gateway
+cd ~/gateway
+tar xzf ~/gateway-repo.tar.gz
+# Creates: app/ fixtures/ scripts/ packaging/ pyproject.toml .env.sonic.example
 ```
 
 ---
@@ -126,7 +128,7 @@ tar xzf gateway-repo.tar.gz
 
 ```bash
 # Using the extracted tarball from Step 0
-cd ~
+cd ~/gateway
 bash scripts/build_deb.sh
 # → sonic-openconfig-diagnostic-gateway_0.1.0_amd64.deb (25KB)
 
@@ -162,11 +164,11 @@ make init
 
 # Copy the .deb from the extracted project
 mkdir -p src/sonic-openconfig-diagnostic-gateway
-cp ~/sonic-openconfig-diagnostic-gateway_0.1.0_amd64.deb \
+cp ~/gateway/sonic-openconfig-diagnostic-gateway_0.1.0_amd64.deb \
    src/sonic-openconfig-diagnostic-gateway/
 
 # Copy the build rule file
-cp ~/packaging/sonic-buildimage/sonic-openconfig-diagnostic-gateway.mk \
+cp ~/gateway/packaging/sonic-buildimage/sonic-openconfig-diagnostic-gateway.mk \
    rules/
 
 # Verify

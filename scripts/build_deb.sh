@@ -17,7 +17,10 @@
 
 set -euo pipefail
 
-cd "$(dirname "$0")/.."
+# Resolve the repo root regardless of where the script is invoked from
+SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
+REPO_ROOT="$(cd "${SCRIPT_DIR}/.." && pwd)"
+cd "${REPO_ROOT}"
 
 PACKAGE="sonic-openconfig-diagnostic-gateway"
 VERSION="0.1.0"
